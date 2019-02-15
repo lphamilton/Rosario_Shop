@@ -1,0 +1,36 @@
+{
+  "name": "rosario_shop",
+  "version": "1.0.0",
+  "description": "A website dedicated to Rosarios sugar skulls",
+  "main": "index.jsx",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "react-dev": "webpack -d --watch",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lphamilton/Rosario_Shop.git"
+  },
+  "author": "Lisette Paloma Hamilton",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lphamilton/Rosario_Shop/issues"
+  },
+  "homepage": "https://github.com/lphamilton/Rosario_Shop#readme",
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/plugin-proposal-class-properties": "^7.3.0",
+    "@babel/preset-env": "^7.3.1",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.5",
+    "nodemon": "^1.18.9",
+    "webpack": "^4.29.0",
+    "webpack-cli": "^3.2.1"
+  },
+  "dependencies": {
+    "express": "^4.16.4",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0"
+  }
+}
