@@ -27,7 +27,6 @@ span{
 }
 
 
-
 .container {
     position: relative;
     overflow: hidden;
@@ -57,6 +56,12 @@ span{
   height: 180px;
   overflow: hidden;
 }
+
+
+@keyframes slidein {
+    from {margin-left: 0%;}
+    to {margin-left: 100%;}
+  }
 /* the number is the index on the row. Each index should have the same animation delay increase by .1s */
 
 /* .letter-0{
