@@ -4,49 +4,91 @@
     font-family: hanken;
 }
 
-body {
+body{
+    margin:0;
+}
+html{
+  box-sizing: border-box;
+}
+.initial{
   background-color: #171719;
 }
 
-/* #container {
-  height:200px;
+p{
+  margin: 0;
+}
+
+span{
+  height:30px;
+  width:30px;
+  text-align: center;
+  animation:1s slidein linear;
+  animation-fill-mode: forwards;
+}
+
+
+
+.container {
+    position: relative;
+    overflow: hidden;
+    margin-top: 280px;
+    margin-left: 15px;
+    line-height: 1em;
+    font-weight: 550;
+    color: #fff;
+    font-family: hanken, sans-serif;
+    font-size: 170px;
+    letter-spacing: .03rem; 
+}
+
+
+#row1-container {
+    height: 180px;
+    overflow: hidden;
+}
+
+#row2-container {
+  height: 180px;
   overflow: hidden;
+
+}
+
+#row3-container {
+  height: 180px;
+  overflow: hidden;
+}
+/* the number is the index on the row. Each index should have the same animation delay increase by .1s */
+
+/* .letter-0{
+    display: inline-block;
+    animation: .5s heading;
+}
+
+.letter-1{
+    display: inline-block;
+    animation: .6s heading;
 } */
 
-.letter{  
-  color: #fff;
-  font-family: hanken, sans-serif;
-  margin: 0px;
-  font-size: 100px;
-  letter-spacing: .03rem;
-  position: relative;
-  padding-left: 30px;
-  padding: 0px;
-  font-weight: 600;
-}
 
 
-/* #row1 {
-  animation: 1s slide-up;
-  margin: 0%;
-}
 
-@keyframes slide-up {
+/* will change the margin-top */
+/* @keyframes slide-up {
     from {
       margin-top: 100%;
-      height: 200%; 
+      height: 300%; 
     }
   
     to {
       margin-top: 0%;
       height: 100%;
     }
-  }
-
-#row2 {
- 
+}
+  */
+@keyframes heading{
+    0%{ transform: translateY(250px); }
+    100%{ transform: translateY(0px); }
 }
 
-#row3 {
-    
-} */
+
+
