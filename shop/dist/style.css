@@ -11,6 +11,9 @@ body{
     overflow: hidden;
 }
 
+p{
+    margin: 0;
+}
 
 #curtain{
     border:solid red;
@@ -28,7 +31,7 @@ body{
     height: 100%;
     width: 33%;
     overflow: hidden;
-    background-image: url('./skulls7.jpg');
+    background-image: url('./sugarSkull.jpg');
     background-size: cover;
 }
 
@@ -37,12 +40,17 @@ body{
     height: 100%;
     width: 33%;
     overflow: hidden;
+    background-image: url('./ofrenda.jpg');
+    background-size: cover;
 }
 .curt3-container{
     display: inline-block;
     height: 100%;
     width: 34%;
     overflow: hidden;
+    background-image: url('./rosario.jpg');
+    background-position: center;
+    background-size: cover;
 }
 
 .curt1{
@@ -75,18 +83,16 @@ body{
     animation-timing-function: cubic-bezier(0.18, 1.12, 0.93, 0.79);
 }
 
-p{
-  margin: 0;
-}
-
 #app{
     height: 100%;
     width: 100%;
+    overflow: hidden;
 }
 
 #parent{
     height: 100%;
     width: 100%;
+    overflow: hidden;
 }
 
 /*  margin-top: 340px;
@@ -94,34 +100,33 @@ p{
 
 .container {
     position: relative;
-    overflow: hidden;
-    margin-top: 22%;
+    margin-top: 40vh;
     margin-left: 1%;
-    line-height: top;
-    font-weight: 550;
+    font-weight: 600;
     color: #fff;
     font-family: hanken, sans-serif;
-    font-size: 10vw;
+    font-size: 17vmin;
     letter-spacing: .03rem; 
 }
 
 
+
 #row1-container {
   color:pink;
-  height: 18%;
+  height: 1em;
   overflow: hidden;
 }
 
 #row2-container {
   color:pink;
-  height: 17%;
+  height: 1.2em;
   overflow: hidden;
 
 }
 
 #row3-container {
   color:pink;
-  height: 17%;
+  height: 1em;
   overflow: hidden;
 }
 

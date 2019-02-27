@@ -29,6 +29,7 @@ animationStyle(div){ //add style to each container div...(not the letters)
 }
 
 componentDidMount(){
+    console.log(window.width);
     let letters = Array.from(document.querySelectorAll('.rows')); //the intial paragraph tags
 
    //wraping every letter into a span and every span into a div with class "span container..."
