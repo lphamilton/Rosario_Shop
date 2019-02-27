@@ -23,8 +23,9 @@ animationStyle(div){ //add style to each container div...(not the letters)
     div.style.animation = `${delay}s heading forwards`;
     div.firstChild.style.animation = `slidein forwards`;
     div.firstChild.style.animationDuration = `1.3s`;
-    div.firstChild.style.animationDelay = `0.9s`;
-
+    div.firstChild.style.animationDelay = `1.3s`;
+    
+    //after the above is done you need to make sure to set the display:none;
 }
 
 componentDidMount(){
@@ -59,12 +60,18 @@ componentDidMount(){
         this.animationStyle(div);
     });
     
-    //want the container div and the .letter div to be same height and width
-
+    //want the background to split into 3 pieces and slide
+    let background = document.querySelector('.initial'); //the intial paragraph tags
     
+    // setTimeout( () => {
+    //     background.style.backgroundColor = 'pink';
+    // }, 1000);
+    
+    //we want there to be a curtain element below EVERYTHING
 }
     render(){
         return(
+          <div id="parent">
             <div className="container">
               <div id="row1-container">
                 <p className="rows" id="row1">Rosario's</p>
@@ -75,7 +82,8 @@ componentDidMount(){
               <div id="row3-container">
                 <p className="rows" id="row3">Skulls</p>
               </div>
-            </div>);
+            </div>
+          </div>);
     };
 }
 

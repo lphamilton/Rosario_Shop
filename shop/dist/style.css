@@ -4,56 +4,124 @@
     font-family: hanken;
 }
 
+/* body has a class of initial */
+
 body{
     margin:0;
+    overflow: hidden;
 }
-html{
-  box-sizing: border-box;
+
+
+#curtain{
+    border:solid red;
 }
-.initial{
-  background-color: #171719;
+
+#curtains{
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    top: 0px;
+}
+
+.curt1-container{
+    display: inline-block;
+    height: 100%;
+    width: 33%;
+    overflow: hidden;
+    background-image: url('./skulls7.jpg');
+    background-size: cover;
+}
+
+.curt2-container{
+    display: inline-block;
+    height: 100%;
+    width: 33%;
+    overflow: hidden;
+}
+.curt3-container{
+    display: inline-block;
+    height: 100%;
+    width: 34%;
+    overflow: hidden;
+}
+
+.curt1{
+    display: inline-block;
+    height: 100%;
+    background-color: 171719;
+    width: 100%;
+    animation: 1s slidein forwards;
+    animation-delay: 1.3s;
+    animation-timing-function: cubic-bezier(0.18, 1.12, 0.93, 0.79);
+}
+
+.curt2{
+    display: inline-block;
+    height: 100%;
+    background-color: 171719;
+    width: 100%;
+    animation: 1s slidein forwards;
+    animation-delay: 1.3s;
+    animation-timing-function: cubic-bezier(0.18, 1.12, 0.93, 0.79);
+}
+
+.curt3{
+    display: inline-block;
+    height: 100%;
+    background-color: 171719;
+    width: 100%;
+    animation: 1s slidein forwards;
+    animation-delay: 1.3s;
+    animation-timing-function: cubic-bezier(0.18, 1.12, 0.93, 0.79);
 }
 
 p{
   margin: 0;
 }
 
-span{
-  height:30px;
-  width:30px;
-  text-align: center;
-  animation:1s slidein linear;
-  animation-fill-mode: forwards;
+#app{
+    height: 100%;
+    width: 100%;
 }
 
+#parent{
+    height: 100%;
+    width: 100%;
+}
+
+/*  margin-top: 340px;
+    margin-left: 15px; */
 
 .container {
     position: relative;
     overflow: hidden;
-    margin-top: 280px;
-    margin-left: 15px;
-    line-height: 1em;
+    margin-top: 22%;
+    margin-left: 1%;
+    line-height: top;
     font-weight: 550;
     color: #fff;
     font-family: hanken, sans-serif;
-    font-size: 170px;
+    font-size: 10vw;
     letter-spacing: .03rem; 
 }
 
 
 #row1-container {
-    height: 180px;
-    overflow: hidden;
+  color:pink;
+  height: 18%;
+  overflow: hidden;
 }
 
 #row2-container {
-  height: 180px;
+  color:pink;
+  height: 17%;
   overflow: hidden;
 
 }
 
 #row3-container {
-  height: 180px;
+  color:pink;
+  height: 17%;
   overflow: hidden;
 }
 
@@ -62,34 +130,7 @@ span{
     from {margin-left: 0%;}
     to {margin-left: 100%;}
   }
-/* the number is the index on the row. Each index should have the same animation delay increase by .1s */
 
-/* .letter-0{
-    display: inline-block;
-    animation: .5s heading;
-}
-
-.letter-1{
-    display: inline-block;
-    animation: .6s heading;
-} */
-
-
-
-
-/* will change the margin-top */
-/* @keyframes slide-up {
-    from {
-      margin-top: 100%;
-      height: 300%; 
-    }
-  
-    to {
-      margin-top: 0%;
-      height: 100%;
-    }
-}
-  */
 @keyframes heading{
     0%{ transform: translateY(250px); }
     100%{ transform: translateY(0px); }
