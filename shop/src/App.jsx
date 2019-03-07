@@ -11,42 +11,47 @@ class App extends React.Component{
         };
     }
 
-animationStyle(div){ //add style to each container div...(not the letters)
-    //will take a span and add style 
-    //if it's classname is letter-0 add style delay of .5
+animationStyle(div){ 
     let regex = /[0-9]/g; 
     let index = div.className.match(regex);
-    let delay = ((index * 0.1) + .5).toFixed(1);// delay = 0.1x + .5
-
+    let delay = ((index * 0.1) + .5).toFixed(1); // delay = 0.1x + .5
     div.style.display = 'inline-block';
     div.style.overflow = 'hidden';
+
+
     div.style.animation = `${delay}s heading forwards`;
     div.firstChild.style.animation = `slidein forwards`;
+
+    div.firstChild.addEventListener('animationend', () => { //Only once the animation ends (1.3s), the Shop component will move forward
+        document.querySelector('.Shop-Container').style.zIndex=12;
+        document.querySelector('.curt1-container').style.zIndex=11; //making the containers clickable 
+        document.querySelector('.curt2-container').style.zIndex=11; //TODO: Generalize 
+        document.querySelector('.curt3-container').style.zIndex=11;
+    });
+
+    
+
     div.firstChild.style.animationDuration = `1.3s`;
     div.firstChild.style.animationDelay = `1.3s`;
-    
-    //after the above is done you need to make sure to set the display:none;
 }
 
 componentDidMount(){
-    console.log(window.width);
+
     let letters = Array.from(document.querySelectorAll('.rows')); //the intial paragraph tags
 
-   //wraping every letter into a span and every span into a div with class "span container..."
     letters.forEach((row) => {
-        row.innerHTML = row.innerHTML.replace(/./g, `<div class="span-container-"><div class=letter>$&</div></div>`); //replace all the letters inside the P with spans
+        row.innerHTML = row.innerHTML.replace(/./g, `<div class="span-container-"><div class=letter>$&</div></div>`); 
     })
 
-    //change the spans into divs
 
     //each span should have an identifing class
     let row1 = Array.from(document.querySelectorAll('#row1 .span-container-')); //array of all the divs with parent id=row1 && .span-container
     let row2 = Array.from(document.querySelectorAll('#row2 .span-container-')); //want to select all divs
     let row3 = Array.from(document.querySelectorAll('#row3 .span-container-')); //row3
  
-    //write function to do this: (adds a number to each span classname) "...container-indexNumberInRow"
+
+    //*TODO*/:write function to do this: (adds a number to each span classname) "...container-indexNumberInRow"
     row1.forEach( (div, index) => { 
-        div.style.overflow = 'hidden';
         div.className += index; //added the index to the className
         this.animationStyle(div);
     });
@@ -61,14 +66,7 @@ componentDidMount(){
         this.animationStyle(div);
     });
     
-    //want the background to split into 3 pieces and slide
-    let background = document.querySelector('.initial'); //the intial paragraph tags
     
-    // setTimeout( () => {
-    //     background.style.backgroundColor = 'pink';
-    // }, 1000);
-    
-    //we want there to be a curtain element below EVERYTHING
 }
     render(){
         return(

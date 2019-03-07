@@ -15,9 +15,6 @@ p{
     margin: 0;
 }
 
-#curtain{
-    border:solid red;
-}
 
 #curtains{
     width: 100%;
@@ -27,12 +24,14 @@ p{
 }
 
 .curt1-container{
+    position: relative;
     display: inline-block;
     height: 100%;
     width: 33%;
     overflow: hidden;
-    background-image: url('./sugarSkull.jpg');
+    background-image: url('./cempasuchil.jpeg');
     background-size: cover;
+    background-position: bottom;
 }
 
 .curt2-container{
@@ -40,30 +39,34 @@ p{
     height: 100%;
     width: 33%;
     overflow: hidden;
-    background-image: url('./ofrenda.jpg');
+    background-image: url('./craft.jpeg');
     background-size: cover;
+    background-position: center;
 }
 .curt3-container{
     display: inline-block;
     height: 100%;
     width: 34%;
     overflow: hidden;
-    background-image: url('./rosario.jpg');
-    background-position: center;
+    background-image: url('./large_ofrenda.jpeg');
+    background-position: 35%;
     background-size: cover;
 }
 
 .curt1{
+    position: absolute;
     display: inline-block;
     height: 100%;
     background-color: 171719;
     width: 100%;
     animation: 1s slidein forwards;
     animation-delay: 1.3s;
-    animation-timing-function: cubic-bezier(0.18, 1.12, 0.93, 0.79);
+    animation-timing-function: cubic-bezier(0.18, 1.12, 0.93, 0.79);  
+    
 }
 
 .curt2{
+    position: relative;
     display: inline-block;
     height: 100%;
     background-color: 171719;
@@ -74,6 +77,7 @@ p{
 }
 
 .curt3{
+    position: relative;
     display: inline-block;
     height: 100%;
     background-color: 171719;
@@ -95,8 +99,50 @@ p{
     overflow: hidden;
 }
 
-/*  margin-top: 340px;
-    margin-left: 15px; */
+.Shop-Container{
+    position: absolute;
+    color: white;
+	top: 60%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+    text-align: center;
+    font-family: hanken, sans-serif;
+    font-size: 8vmin;
+    letter-spacing: .03rem; 
+    font-weight: 600;
+    width: 70%;
+    height: 40vh;
+    overflow: hidden;
+    /* padding-top: 100px; */
+}
+
+.curt1-container:hover .Shop-Nav{
+  transform: translateY(-35%);
+}
+
+.curt1-container:hover .Hidden-Text{
+    transform: translateY(-70%);
+  }
+
+.Shop-Nav{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 70%;
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  /*cubic-bezier(0, 0, 0.04, 1.13) */
+}
+
+.Hidden-Text{
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  height: 50%;
+  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  font-size: 1.5vmax;
+  font-weight: 400;
+}
+    /* want this text vertical position to be limited by the height of parent container? v.port? Want to make sure it is always hidden before hover */
 
 .container {
     position: relative;
@@ -109,9 +155,14 @@ p{
     letter-spacing: .03rem; 
 }
 
-
+.fullshop{
+    animation: 1s fullshop forwards;
+    animation-delay: 0.2s;
+    animation-timing-function: cubic-bezier(0.18, 1.12, 0.93, 0.79);
+}
 
 #row1-container {
+  position: relative;
   color:pink;
   height: 1em;
   overflow: hidden;
@@ -132,13 +183,24 @@ p{
 
 
 @keyframes slidein {
-    from {margin-left: 0%;}
-    to {margin-left: 100%;}
-  }
+    from {margin-left: 0%;
+    }
+    to {margin-left: 100%;
+    }
+}
+
+
+@keyframes fullshop {
+    to {width: 100%;
+    }
+}
 
 @keyframes heading{
-    0%{ transform: translateY(250px); }
-    100%{ transform: translateY(0px); }
+    0%{ transform: translateY(250px); 
+       
+    }
+    100%{ transform: translateY(0px); 
+    }
 }
 
 
