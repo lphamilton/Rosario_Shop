@@ -3,10 +3,8 @@ import Curtains from './Curtains.jsx';
 import Letters from './Letters.jsx';
 import Shop from './Shop.jsx';
 
-
 import {Switch, Route, withRouter} from 'react-router-dom';
 import { TransitionGroup, CSSTransition } from "react-transition-group";
-import Transition from 'react-transition-group/Transition';
 
 
 class App extends React.Component{
