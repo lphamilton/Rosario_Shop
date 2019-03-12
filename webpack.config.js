@@ -1,3 +1,5 @@
+var HtmlWebpackPlugin = require('html-webpack-plugin');
+
 module.exports = {
   entry: __dirname + '/shop/src/index.jsx',
   module: {
@@ -12,8 +14,12 @@ module.exports = {
       }
     ]
   },
+  devServer: {
+    historyApiFallback: true,
+  },
    output: {
     filename: 'bundle.js',
-    path: __dirname + '/shop/dist'
+    path: __dirname + '/shop/dist',
+    publicPath: '/'
   }
 };

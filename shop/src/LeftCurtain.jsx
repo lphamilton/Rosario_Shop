@@ -1,47 +1,41 @@
 import React from 'react';
-import Shop from './Shop.jsx';
+import {NavLink} from 'react-router-dom';
 
 class LeftCurtain extends React.Component{
 
     constructor(props){
         super(props);
         this.state = {
-            hidden: false
+            shopOpen: false 
         };
-        this.handleLeftCurtainClick = this.handleLeftCurtainClick.bind(this);
+        this.handleShopClick = this.handleShopClick.bind(this);
     }
 
-
-handleLeftCurtainClick(event){
-//   console.log("clicked on left curtain");
-//   console.log("clicked on shop");
-//   //Add a class to the shop-container that makes it expand? Width 100% for the shop and 0 for the other crap 
-//   //Make the shop-subcontain Disapear...?
-//   //Make other shit appear...
-//   let shop = document.querySelector('.curt1-container');
-//   shop.classList.add('fullshop');
-//   document.querySelector('.Shop-Container').style.display = 'none';
-
-//   //Make a WHOLE component appear thru a transition (it will be a transparent component laying on top)
-//   //pass down shop props accordingly and have the shop display the components according to props
-}
-
-
-componentDidMount(){
-    console.log("mounted");
-    //I only want curt1 to be above the items inside curt1-container
-    //curt1-container has a background that is below curt1
+handleShopClick(e){
+    console.log("clicked")
     
 }
 
+
     render(){ 
         return(
-            <div className="curt1-container" onClick={this.handleLeftCurtainClick}>
-              <Shop shop={false}/>
+            <NavLink className="curt1-container" style={{ textDecoration: 'none' }} to="/shop">
+           
+               <div className="Shop-Container">
+                 <div className="Shop-Subcontain">
+                   
+                     <div className="Shop-Nav">SHOP</div>
+                     <div className="Hidden-Text">Buy sugar skulls!<br/>Various sizing and color customization avaliable.</div> 
+                  
+                   </div>
+                  </div>
+             
               <div className="curt1"></div>
-            
-            </div>)
-    }
+           </NavLink>
+    
+        )}
 }
 
 export default LeftCurtain;
+
+

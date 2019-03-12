@@ -4,11 +4,12 @@
     font-family: hanken;
 }
 
-/* body has a class of initial */
+
 
 body{
     margin:0;
     overflow: hidden;
+    background-color: black;
 }
 
 p{
@@ -93,7 +94,10 @@ p{
     overflow: hidden;
 }
 
-#parent{
+/* Letters are overlaying the Curtain Component */
+#letters{
+    position: absolute;
+    top: 0px;
     height: 100%;
     width: 100%;
     overflow: hidden;
@@ -162,7 +166,6 @@ p{
 }
 
 #row1-container {
-  position: relative;
   color:pink;
   height: 1em;
   overflow: hidden;
@@ -189,13 +192,7 @@ p{
     }
 }
 
-
-@keyframes fullshop {
-    to {width: 100%;
-    }
-}
-
-@keyframes heading{
+@keyframes slideup{
     0%{ transform: translateY(250px); 
        
     }

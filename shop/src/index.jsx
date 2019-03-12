@@ -1,7 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App.jsx';
-import Curtains from './Curtains.jsx';
+import { BrowserRouter } from 'react-router-dom';
 
-ReactDOM.render(<App />, document.getElementById('app'));
-ReactDOM.render(<Curtains />, document.getElementById('curtains'));
+
+ReactDOM.render(
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>, document.getElementById('app'));
+
+
+// ReactDOM.render(<App />, document.getElementById('app'));
+// ReactDOM.render(<Curtains />, document.getElementById('curtains'));

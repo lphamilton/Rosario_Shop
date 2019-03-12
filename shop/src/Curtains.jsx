@@ -6,26 +6,26 @@ class Curtains extends React.Component{
     constructor(props){
         super(props);
         this.state = {
-
         };
+        
     }
-
     componentDidMount(){
-       console.log("curtains mounted")
+      console.log("Curtains mounted");
     }
 
-    render(){ 
+    render(){
         return(
-            <div className="curtains">
-              <LeftCurtain />
-              <div className="curt2-container">
-                <div className="curt2"></div>
-              </div>
-              <div className="curt3-container">
-                <div className="curt3"></div>
-              </div>
-            </div>)
-    }
-}
+                <div className="curtains">
+                    <LeftCurtain />
+                  <div className="curt2-container">
+                    <div className="curt2"></div>
+                  </div>
+                  <div className="curt3-container">
+                    <div className="curt3"></div>
+                  </div>
+                </div>
+            
+        )};
+};
 
 export default Curtains;
