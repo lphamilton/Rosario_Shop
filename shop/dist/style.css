@@ -36,6 +36,7 @@ p{
 }
 
 .curt2-container{
+    position: relative;
     display: inline-block;
     height: 100%;
     width: 33%;
@@ -45,6 +46,7 @@ p{
     background-position: center;
 }
 .curt3-container{
+    position: relative;
     display: inline-block;
     height: 100%;
     width: 34%;
@@ -55,7 +57,7 @@ p{
 }
 
 .curt1{
-    position: absolute;
+    position: relative;
     display: inline-block;
     height: 100%;
     background-color: 171719;
@@ -127,6 +129,15 @@ p{
 .curt1-container:hover .Hidden-Text{
     transform: translateY(-70%);
   }
+
+.curt2-container:hover .Shop-Nav{
+transform: translateY(-35%);
+}
+
+.curt2-container:hover .Hidden-Text{
+    transform: translateY(-70%);
+}
+  
 
 .Shop-Nav{
   position: absolute;

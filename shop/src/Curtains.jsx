@@ -1,11 +1,13 @@
 import React from 'react';
 import LeftCurtain from './LeftCurtain.jsx';
+import MiddleCurtain from './MiddleCurtain.jsx';
 
 class Curtains extends React.Component{
 
     constructor(props){
         super(props);
         this.state = {
+
         };
         
     }
@@ -17,9 +19,7 @@ class Curtains extends React.Component{
         return(
                 <div className="curtains">
                     <LeftCurtain />
-                  <div className="curt2-container">
-                    <div className="curt2"></div>
-                  </div>
+                    <MiddleCurtain />
                   <div className="curt3-container">
                     <div className="curt3"></div>
                   </div>

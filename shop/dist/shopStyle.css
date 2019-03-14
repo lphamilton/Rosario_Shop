@@ -16,15 +16,35 @@
     background-position: bottom;
 }
 
+.about-container{
+    position: relative;
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background-image: url('./craft.jpeg');
+    background-size: cover;
+    background-position: bottom;
+}
+
+
 
 .fade-enter {
     width: 33%;
-
 }
 
 .fade-enter.fade-enter-active {
     width: 100%;
-
     transition: all 3000ms linear;
 }
+
+.bloop-enter {
+    width: 33%;
+}
+
+.bloop-enter.bloop-enter-active {
+    width: 100%;
+    transition: all 3000ms linear;
+}
+
 

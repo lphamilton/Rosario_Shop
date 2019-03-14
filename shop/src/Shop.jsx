@@ -13,7 +13,7 @@ class Shop extends React.Component{
        console.log("shop mounted")
     }
 
-  //need the background to settimeout from black to covered
+  //
     render(){ 
         return(
         

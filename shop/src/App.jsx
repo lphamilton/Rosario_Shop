@@ -2,6 +2,7 @@ import React from 'react';
 import Curtains from './Curtains.jsx';
 import Letters from './Letters.jsx';
 import Shop from './Shop.jsx';
+import About from './About.jsx';
 
 import {Switch, Route, withRouter} from 'react-router-dom';
 import { TransitionGroup, CSSTransition } from "react-transition-group";
@@ -30,8 +31,7 @@ componentDidMount(){
                     <Letters />
                 </div>}>
             </Route>
-                  
-        
+           
             <TransitionGroup>
               <CSSTransition
                 unmountOnExit //so that the transiton will happen even if user presses back button for
@@ -46,6 +46,27 @@ componentDidMount(){
               >
                 <Switch key={location.key} location={location}>
                   <Route exact path="/shop" component={Shop}></Route>
+                  
+                  
+                </Switch>
+              </CSSTransition>
+             
+              
+            </TransitionGroup>
+            <TransitionGroup>
+              <CSSTransition
+                unmountOnExit //so that the transiton will happen even if user presses back button for
+                key={location.key}
+                timeout={{exit:3000}}
+                addEndListener={(node, done) => {
+                    if(done){
+                    // use the css transitionend event to mark the finish of a transition
+                    node.addEventListener('transitionend', () => node.style.width="100%")};
+                  }}
+                classNames={'fade'}
+              >
+                <Switch key={location.key} location={location}>
+                  <Route exact path="/about" component={About}></Route>         
                 </Switch>
               </CSSTransition>
             </TransitionGroup>

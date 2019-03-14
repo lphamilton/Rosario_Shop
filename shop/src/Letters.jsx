@@ -24,10 +24,12 @@ animationStyle(div){
 
     div.firstChild.addEventListener('animationend', () => { //Only once the animation ends (1.3s), the Shop component will move forward
         document.querySelector('.Shop-Container').style.zIndex=12;  //making the app component under everything
+        console.log( document.querySelectorAll('.Shop-Container'));
+        Array.from(document.querySelectorAll('.Shop-Container')).forEach( (div) => div.style.zIndex=12);
         document.querySelector('.curt1-container').style.zIndex=11; //making the containers clickable 
         document.querySelector('.curt2-container').style.zIndex=11; //TODO: Generalize 
         document.querySelector('.curt3-container').style.zIndex=11;
-    });
+    }); 
 
     
 

@@ -20,7 +20,6 @@ handleShopClick(e){
     render(){ 
         return(
             <NavLink className="curt1-container" style={{ textDecoration: 'none' }} to="/shop">
-           
                <div className="Shop-Container">
                  <div className="Shop-Subcontain">
                    
